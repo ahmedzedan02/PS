@@ -1,0 +1,21 @@
+from collections import Counter
+ 
+t = int(input())
+target = "01032025"
+required = Counter(target)
+ 
+for _ in range(t):
+    n = int(input())
+    digits = list(map(str, input().split()))
+    current = Counter()
+    found = False
+ 
+    for i in range(n):
+        current[digits[i]] += 1
+        if all(current[d] >= required[d] for d in required):
+            print(i + 1)
+            found = True
+            break
+ 
+    if not found:
+        print(0)
