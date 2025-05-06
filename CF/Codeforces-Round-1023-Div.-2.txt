@@ -1,0 +1,2 @@
+// No code could be extracted from the editor
+// This is a placeholder file
